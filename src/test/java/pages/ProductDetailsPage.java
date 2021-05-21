@@ -9,8 +9,8 @@ import org.openqa.selenium.support.PageFactory;
 
 import java.util.List;
 
-public class ProductDetailsPage extends Header{
-    private  WebDriver driver;
+public class ProductDetailsPage extends Header {
+    private WebDriver driver;
 
     @FindBys(@FindBy(className = "list-group-item"))
     private WebElement similarItemL;
@@ -20,10 +20,11 @@ public class ProductDetailsPage extends Header{
         this.driver = driver;
         PageFactory.initElements(driver, this);
     }
-    public void selectSimilarItems(String itemName){
+
+    public void selectSimilarItems(String itemName) {
         List<WebElement> similarItems = driver.findElements(By.className("list-group-item"));
-        for(WebElement w:similarItems){
-            if(w.getText().equalsIgnoreCase(itemName)){
+        for (WebElement w : similarItems) {
+            if (w.getText().equalsIgnoreCase(itemName)) {
                 w.click();
             }
         }
