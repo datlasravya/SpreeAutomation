@@ -1,5 +1,6 @@
-package pages;
+package Pages;
 
+import Constants.Constant;
 import org.openqa.selenium.*;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.support.FindBy;
@@ -29,7 +30,7 @@ public class Login extends Header {
     }
 
     public void as(String email, String Password) throws InterruptedException, IOException {
-        WebDriverWait wait = new WebDriverWait(driver, constants.Constants.EXPLICIT_WAIT);
+        WebDriverWait wait = new WebDriverWait(driver, Constant.EXPLICIT_WAIT);
         wait.until(ExpectedConditions.elementToBeClickable(userName));
         userName.sendKeys(email);
         passWord.sendKeys(Password);

@@ -1,9 +1,9 @@
 package Login;
 
-import constants.BaseTest;
+import Constants.BaseTest;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-import pages.Login;
+import Pages.Login;
 
 import java.io.IOException;
 

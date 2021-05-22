@@ -1,4 +1,4 @@
-package constants;
+package Constants;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -12,7 +12,7 @@ public class BaseTest {
     public void setUp() {
         System.setProperty("webdriver.chrome.driver", "/Users/sravyadatla/Downloads/chromedriver");
         driver = new ChromeDriver();
-        driver.get(constants.Constants.BASE_URL);
+        driver.get(Constants.Constant.BASE_URL);
         driver.manage().window().maximize();
 
     }
